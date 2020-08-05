@@ -1,7 +1,7 @@
 /*
  * @Author: Tmier
  * @Date: 2020-08-05 15:00:55
- * @LastEditTime: 2020-08-05 15:53:49
+ * @LastEditTime: 2020-08-05 15:51:53
  * @Description: 
  */
 import Vue from 'vue'
@@ -15,10 +15,11 @@ const routes = [{
   path: '/',
   name: 'login',
   component: Login,
-}, {
-  path: '/dashboard',
-  name: 'dashboard',
-  component: Dashboard,
+  children: [{
+    path: '/dashboard',
+    name: 'dashboard',
+    component: Dashboard,
+  }]
 }]
 
 const router = new VueRouter({
