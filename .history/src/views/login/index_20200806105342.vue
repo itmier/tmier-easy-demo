@@ -74,9 +74,9 @@ export default {
     async toLogin() {
       let res = await login(this.loginForm);
       if (res.data.code === 10000) {
-        this.$message.success(res.data.data.msg);
+        this.$message.success(res.data.data.message);
       } else {
-          this.$message.error(res.data.msg)
+          this.$message.error(res.data.message)
       }
     },
   },

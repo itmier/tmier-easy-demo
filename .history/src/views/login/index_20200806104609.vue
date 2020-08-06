@@ -1,7 +1,7 @@
 <!--
  * @Author: Tmier
  * @Date: 2020-08-05 15:47:09
- * @LastEditTime: 2020-08-06 10:53:42
+ * @LastEditTime: 2020-08-06 10:46:09
  * @Description: 
 -->
 <template>
@@ -58,10 +58,7 @@ export default {
   components: {},
   data() {
     return {
-      loginRules: {
-        username: [{ required: true, trigger: "blur" }],
-        password: [{ required: true, trigger: "blur" }],
-      },
+      loginRules: [],
       passwordType: "password",
       loginForm: {},
       labelPosition: "right",
@@ -73,11 +70,7 @@ export default {
   methods: {
     async toLogin() {
       let res = await login(this.loginForm);
-      if (res.data.code === 10000) {
-        this.$message.success(res.data.data.msg);
-      } else {
-          this.$message.error(res.data.msg)
-      }
+      console.log(res);
     },
   },
 };

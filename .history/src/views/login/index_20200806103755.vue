@@ -1,7 +1,7 @@
 <!--
  * @Author: Tmier
  * @Date: 2020-08-05 15:47:09
- * @LastEditTime: 2020-08-06 10:53:42
+ * @LastEditTime: 2020-08-06 10:37:55
  * @Description: 
 -->
 <template>
@@ -32,7 +32,7 @@
       </el-form-item>
       <el-form-item prop="password">
         <el-input
-          v-model="loginForm.password"
+          v-model="loginForm.region"
           ref="password"
           placeholder="Password"
           name="password"
@@ -40,11 +40,7 @@
           :type="passwordType"
           tabindex="2"
           autocomplete="on"
-          show-password
         ></el-input>
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" style="width:100%" @click="toLogin">登 录</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -58,26 +54,22 @@ export default {
   components: {},
   data() {
     return {
-      loginRules: {
-        username: [{ required: true, trigger: "blur" }],
-        password: [{ required: true, trigger: "blur" }],
-      },
-      passwordType: "password",
       loginForm: {},
       labelPosition: "right",
-      loginData: {},
+      loginData: {
+        username: "admin",
+        password: "admin2",
+      },
     };
   },
-  created() {},
+  created() {
+    this.toLogin();
+  },
   computed: {},
   methods: {
     async toLogin() {
-      let res = await login(this.loginForm);
-      if (res.data.code === 10000) {
-        this.$message.success(res.data.data.msg);
-      } else {
-          this.$message.error(res.data.msg)
-      }
+      let res = await login(this.loginData);
+      console.log(res);
     },
   },
 };
@@ -100,7 +92,6 @@ export default {
     overflow: hidden;
     // position: relative;
     background: rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
     // height:336px;
     .el-form-item {
       border: 1px solid rgba(255, 255, 255, 0.1);

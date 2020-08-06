@@ -1,7 +1,7 @@
 /*
  * @Author: Tmier
  * @Date: 2020-08-05 17:20:39
- * @LastEditTime: 2020-08-06 10:54:54
+ * @LastEditTime: 2020-08-06 10:47:48
  * @Description: 
  */
 export default [{
@@ -22,7 +22,7 @@ export default [{
     } else {
       return {
         code: 50008,
-        msg: '用户名或者密码错误'
+        message: '用户名或者密码错误'
       }
     }
 

@@ -1,7 +1,7 @@
 <!--
  * @Author: Tmier
  * @Date: 2020-08-05 15:47:09
- * @LastEditTime: 2020-08-06 10:53:42
+ * @LastEditTime: 2020-08-06 10:53:01
  * @Description: 
 -->
 <template>
@@ -74,9 +74,7 @@ export default {
     async toLogin() {
       let res = await login(this.loginForm);
       if (res.data.code === 10000) {
-        this.$message.success(res.data.data.msg);
-      } else {
-          this.$message.error(res.data.msg)
+        this.$message.success(res.data.data.message);
       }
     },
   },
