@@ -1,13 +1,12 @@
 <!--
  * @Author: Tmier
  * @Date: 2020-08-05 15:47:09
- * @LastEditTime: 2020-08-06 09:11:46
+ * @LastEditTime: 2020-08-06 09:00:16
  * @Description: 
 -->
 <template>
-    <div class='userlogin'>
+    <div class=''>
         <h1>登录页面</h1>
-        <el-button type="primary">测试</el-button>
     </div>
 </template>
 
@@ -15,7 +14,6 @@
     //import x from ''
     import { login } from '@/api/user'
     export default {
-        name: 'UserLogin',
         components: {
 
         },
@@ -23,7 +21,7 @@
             return {
                 loginData: {
                     username: 'admin',
-                    password: 'admin2'
+                    password: 'admin'
                 }
             };
         },
@@ -44,7 +42,5 @@
 
 <style lang='less' scoped>
 //@import url()
-.userlogin {
-    
-}
+
 </style>
