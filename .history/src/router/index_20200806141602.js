@@ -1,7 +1,7 @@
 /*
  * @Author: Tmier
  * @Date: 2020-08-05 15:00:55
- * @LastEditTime: 2020-08-06 15:09:19
+ * @LastEditTime: 2020-08-06 14:16:02
  * @Description: 
  */
 import Vue from 'vue'
@@ -22,7 +22,7 @@ const routes = [
     path: '/',
     name: 'layout',
     redirect: {
-      name: 'dashboard'
+      name: 'login'
     },
     component: Layout,
     children: [{

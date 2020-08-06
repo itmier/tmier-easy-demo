@@ -1,7 +1,7 @@
 <!--
  * @Author: Tmier
  * @Date: 2020-08-05 15:47:09
- * @LastEditTime: 2020-08-06 11:00:46
+ * @LastEditTime: 2020-08-06 10:58:23
  * @Description: 
 -->
 <template>
@@ -78,7 +78,6 @@ export default {
       this.btnLoadingFlag = false;
       if (res.data.code === 10000) {
         this.$message.success(res.data.data.msg);
-        this.$router.push({name:'dashboard'})
       } else {
         this.$message.error(res.data.msg);
       }

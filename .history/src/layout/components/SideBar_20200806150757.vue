@@ -1,12 +1,12 @@
 <!--
  * @Author: Tmier
- * @Date: 2020-08-05 15:48:08
- * @LastEditTime: 2020-08-06 15:35:52
+ * @Date: 2020-08-06 11:40:56
+ * @LastEditTime: 2020-08-06 15:07:57
  * @Description: 
 -->
 <template>
   <div class>
-    main
+    <h1>NavBar</h1>
   </div>
 </template>
 
