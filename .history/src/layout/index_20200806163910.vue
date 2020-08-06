@@ -1,13 +1,16 @@
 <!--
  * @Author: Tmier
  * @Date: 2020-08-06 11:40:36
- * @LastEditTime: 2020-08-06 17:34:29
+ * @LastEditTime: 2020-08-06 16:39:10
  * @Description: 
 -->
 <template>
   <div class="layout">
     <div class="layout-sliderbar">
-      <SideBar v-show="sideBarFlag"></SideBar>
+      <h1 class="animated infinite bounce delay-2s">Example</h1>
+      <transition name="move">
+        <SideBar v-show="sideBarFlag"></SideBar>
+      </transition>
     </div>
     <div class="layout-container">
       <NavHeader></NavHeader>
@@ -29,7 +32,7 @@ export default {
     SideBar,
     AppMain,
     NavHeader,
-    TabItem
+    TabItem,
   },
   data() {
     return {

@@ -1,13 +1,13 @@
 <!--
  * @Author: Tmier
  * @Date: 2020-08-06 11:40:36
- * @LastEditTime: 2020-08-06 17:34:29
+ * @LastEditTime: 2020-08-06 16:46:56
  * @Description: 
 -->
 <template>
   <div class="layout">
     <div class="layout-sliderbar">
-      <SideBar v-show="sideBarFlag"></SideBar>
+        <SideBar v-show="sideBarFlag"></SideBar>
     </div>
     <div class="layout-container">
       <NavHeader></NavHeader>
@@ -29,7 +29,7 @@ export default {
     SideBar,
     AppMain,
     NavHeader,
-    TabItem
+    TabItem,
   },
   data() {
     return {

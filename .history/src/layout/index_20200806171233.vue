@@ -1,7 +1,7 @@
 <!--
  * @Author: Tmier
  * @Date: 2020-08-06 11:40:36
- * @LastEditTime: 2020-08-06 17:34:29
+ * @LastEditTime: 2020-08-06 17:12:33
  * @Description: 
 -->
 <template>
@@ -29,7 +29,7 @@ export default {
     SideBar,
     AppMain,
     NavHeader,
-    TabItem
+    TabItem,
   },
   data() {
     return {

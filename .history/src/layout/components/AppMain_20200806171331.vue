@@ -1,12 +1,14 @@
 <!--
  * @Author: Tmier
  * @Date: 2020-08-06 11:42:40
- * @LastEditTime: 2020-08-06 17:15:27
+ * @LastEditTime: 2020-08-06 17:13:31
  * @Description: 
 -->
 <template>
   <div class="appmain">
+    <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
       <router-view></router-view>
+    </transition>
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <!--
  * @Author: Tmier
  * @Date: 2020-08-06 11:40:56
- * @LastEditTime: 2020-08-06 18:01:26
+ * @LastEditTime: 2020-08-06 17:37:17
  * @Description: 
 -->
 <template>
@@ -11,9 +11,6 @@
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#ffd04b"
     >
       <el-submenu index="1">
         <template slot="title">
@@ -51,7 +48,6 @@
 
 <script>
 //import x from ''
-import { getMenuInfo } from '@/api/menu.js'
 export default {
   name: "sidebar",
   components: {},
@@ -59,14 +55,7 @@ export default {
     return {};
   },
   computed: {},
-  created() {
-    this.toGetMenuInfo()
-  },
   methods: {
-    async toGetMenuInfo() {
-      const res = await getMenuInfo({})
-      console.log(res)
-    },
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
     },
@@ -82,15 +71,12 @@ export default {
 .sidebar {
   height: 100%;
   width: 210px;
-  background: rgb(84, 92, 100);
+  background: #ccc;
   box-sizing: border-box;
 }
 @media screen and (max-width: 1010px) {
   .sidebar {
     display: none;
   }
-}
-/deep/ .el-menu {
-  border: 0;
 }
 </style>

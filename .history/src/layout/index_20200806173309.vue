@@ -1,11 +1,14 @@
 <!--
  * @Author: Tmier
  * @Date: 2020-08-06 11:40:36
- * @LastEditTime: 2020-08-06 17:34:29
+ * @LastEditTime: 2020-08-06 17:33:09
  * @Description: 
 -->
 <template>
   <div class="layout">
+    <vue-aos animation-class="fadeIn animated">
+    <div>Test</div>
+  </vue-aos>
     <div class="layout-sliderbar">
       <SideBar v-show="sideBarFlag"></SideBar>
     </div>
@@ -18,6 +21,7 @@
 </template>
 
 <script>
+import VueAos from 'vue-aos'
 //import x from ''
 import SideBar from "@/layout/components/SideBar";
 import AppMain from "@/layout/components/AppMain";
@@ -29,7 +33,8 @@ export default {
     SideBar,
     AppMain,
     NavHeader,
-    TabItem
+    TabItem,
+    VueAos
   },
   data() {
     return {

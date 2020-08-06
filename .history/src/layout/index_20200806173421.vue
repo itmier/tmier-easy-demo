@@ -1,7 +1,7 @@
 <!--
  * @Author: Tmier
  * @Date: 2020-08-06 11:40:36
- * @LastEditTime: 2020-08-06 17:34:29
+ * @LastEditTime: 2020-08-06 17:34:21
  * @Description: 
 -->
 <template>
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import VueAos from "vue-aos";
 //import x from ''
 import SideBar from "@/layout/components/SideBar";
 import AppMain from "@/layout/components/AppMain";
@@ -29,7 +30,8 @@ export default {
     SideBar,
     AppMain,
     NavHeader,
-    TabItem
+    TabItem,
+    VueAos,
   },
   data() {
     return {

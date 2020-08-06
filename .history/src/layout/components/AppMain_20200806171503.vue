@@ -1,12 +1,14 @@
 <!--
  * @Author: Tmier
  * @Date: 2020-08-06 11:42:40
- * @LastEditTime: 2020-08-06 17:15:27
+ * @LastEditTime: 2020-08-06 17:15:03
  * @Description: 
 -->
 <template>
   <div class="appmain">
+    <transition name="move" mode="out-in">
       <router-view></router-view>
+    </transition>
   </div>
 </template>
 

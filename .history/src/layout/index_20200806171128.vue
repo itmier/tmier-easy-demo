@@ -1,11 +1,19 @@
 <!--
  * @Author: Tmier
  * @Date: 2020-08-06 11:40:36
- * @LastEditTime: 2020-08-06 17:34:29
+ * @LastEditTime: 2020-08-06 17:11:28
  * @Description: 
 -->
 <template>
   <div class="layout">
+    <div id="box">
+      <!-- 控制数据的值切换显示隐藏 -->
+      <button @click="sideBarFlag=!sideBarFlag">点我展示效果</button>
+
+      <transition enter-active-class="zoomInLeft" leave-active-class="zoomOutRight">
+        <p v-show="show" class="animated"></p>
+      </transition>
+    </div>
     <div class="layout-sliderbar">
       <SideBar v-show="sideBarFlag"></SideBar>
     </div>
@@ -29,7 +37,7 @@ export default {
     SideBar,
     AppMain,
     NavHeader,
-    TabItem
+    TabItem,
   },
   data() {
     return {

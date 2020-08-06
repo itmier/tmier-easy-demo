@@ -1,13 +1,21 @@
 <!--
  * @Author: Tmier
  * @Date: 2020-08-06 11:40:36
- * @LastEditTime: 2020-08-06 17:34:29
+ * @LastEditTime: 2020-08-06 16:46:21
  * @Description: 
 -->
 <template>
   <div class="layout">
     <div class="layout-sliderbar">
-      <SideBar v-show="sideBarFlag"></SideBar>
+      <h1 class="animated slideInLeft">Example</h1>
+      <transition
+        appear
+        appear-class="custom-appear-class"
+        appear-to-class="custom-appear-to-class"
+        appear-active-class="custom-appear-active-class"
+      >
+        <SideBar v-show="sideBarFlag"></SideBar>
+      </transition>
     </div>
     <div class="layout-container">
       <NavHeader></NavHeader>
@@ -29,7 +37,7 @@ export default {
     SideBar,
     AppMain,
     NavHeader,
-    TabItem
+    TabItem,
   },
   data() {
     return {
