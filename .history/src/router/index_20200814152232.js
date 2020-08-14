@@ -1,7 +1,7 @@
 /*
  * @Author: Tmier
  * @Date: 2020-08-05 15:00:55
- * @LastEditTime: 2020-08-14 15:26:18
+ * @LastEditTime: 2020-08-14 15:22:32
  * @Description: 
  */
 import Vue from 'vue'
@@ -22,7 +22,7 @@ import Menu31 from '@/views/page3/menu31'
 import Menu32 from '@/views/page3/menu32'
 
 import Menu4 from '@/views/menu4'
-import PDF from '@/views/pdf'
+import Menu5 from '@/views/menu5'
 
 
 
@@ -144,11 +144,11 @@ const routes = [{
 
       },
       {
-        path: 'pdf',
-        name: 'pdf',
-        component: PDF,
+        path: 'menu5',
+        name: 'menu5',
+        component: Menu5,
         meta: {
-          title: 'PDF'
+          title: 'Menu5'
         }
 
       }
